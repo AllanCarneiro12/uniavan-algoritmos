@@ -16,16 +16,28 @@
 		"description": "Log output to console"
 	},
 
+	// comando para incluir bloco de comentário com as informações de aluno, data e descrição
 	"Bloco de Comentário Padrão": {
-    "prefix": "comentario",
-    "body": [
-      "/**",
-      " * Nome: Allan Carneiro da Cunha Silveira",
-      " * Data: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
-      " * Descrição: ${1:Descrição do código}",
-      " */",
-	  "$2"
-    ],
-    "description": "Bloco de comentário com informações do autor"
-  }
+		"prefix": "comentario",
+		"body": [
+			"/*",
+			"Nome: Allan Carneiro da Cunha Silveira",
+			"Data: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+			"Descrição: ${1:Descrição do código}",
+			"*/",
+			"$2"
+		],
+		"description": "Bloco de comentário com as informações de aluno, data e descrição"
+	},
+
+	// comando para incluir bibliotecas padrão da linguagem C
+	"Include bibliotecas padrão do C": {
+		"prefix": "incluir",
+		"body": [
+			"#include <stdio.h>",
+			"#include <stdlib.h>",
+			"$0"
+		],
+		"description": "incluir bibliotecas padrão da linguagem C"
+	}
 }
