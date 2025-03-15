@@ -20,12 +20,12 @@ int main(int argc, char const *argv[])
     scanf("%f", &km);
     printf("quantos km/l seu carro faz: ");
     scanf("%f", &kml);
-    printf("qual o valor do litro de combustível: ");
+    printf("qual o valor do litro de combustivel: ");
     scanf("%f", &valor);
 
     valor = (km/kml) * valor ;
 
-    printf("estimativa de R$%.2f com gasto de combustivel");
+    printf("estimativa de R$%.2f com gasto de combustivel", valor);
 
     return 0;
 }
