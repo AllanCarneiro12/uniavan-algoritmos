@@ -21,30 +21,28 @@ int main(int argc, char const *argv[])
 {
     system("cls");
 
-    char opcao = 1;
+    char opcao = '1';
 
-    while (opcao != 0)
+    while (opcao != '0')
     {
-
-        printf("Escolha uma opcao: ");
+        printf("\nEscolha uma opcao: ");
         printf("\n1. soma\n2. subtrair\n3. multiplicar\n4. dividir fracoes\n0. sair\n");
         printf("Pressione a tecla referente a acao que deseja fazer\n");
 
         opcao = getch();
+
         switch (opcao)
         {
-        case 0:
+        case '0':
+            printf("\nCASO 0");
             break;
-
-        case 1:
-
-        
+        case '1':
+            printf("\nCASO 1");
+            break;
         default:
+            printf("\nCASO DEFAULT");
             break;
         }
-
-
     }
-
     return 0;
 }
