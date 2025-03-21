@@ -2,7 +2,7 @@
 
 #include "simplificaFracao.h"
 
-void somaFracao()
+void subtraiFracao()
 {
     int numerador1, denominador1, numerador2, denominador2;
 
@@ -18,7 +18,7 @@ void somaFracao()
     numerador1 *= denominador2;
     numerador2 *= denominador1;
 
-    numerador1 += numerador2;
+    numerador1 -= numerador2;
 
     denominador1 *= denominador2;
 
@@ -26,21 +26,6 @@ void somaFracao()
 
     numerador2 = simplificaFracao(numerador1, denominador1);
     denominador2 = simplificaFracao(denominador1, numerador1);
-
-    // codigo transformado na função simplificaFracao
-
-    // aux = numerador1 <= denominador1 ? numerador1 : denominador1; //coleta o menor numero
-
-    // for (int i = 2; i <= aux; i++)
-    // {
-    //     if (numerador1 % i == 0 && denominador1 % i == 0)
-    //     {
-    //         numerador1 /= i;
-    //         denominador1 /= i;
-    //         aux /= i; //otimização
-    //     }
-
-    // }
 
     printf("\n%d \n%d", numerador2, denominador2);
 }

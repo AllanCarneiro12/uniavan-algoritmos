@@ -3,6 +3,8 @@
 #include <conio.h>
 
 #include "somaFracao.h"
+#include "subtraiFracao.h"
+// #include "simplificaFracao.h"
 
 /*
 Nome: Allan Carneiro da Cunha Silveira
@@ -28,7 +30,7 @@ int main(int argc, char const *argv[])
     while (opcao != '0')
     {
         printf("\n\nEscolha uma opcao: ");
-        printf("\n1. soma\n2. subtrair\n3. multiplicar\n4. dividir fracoes\n0. sair\n");
+        printf("\n1. somar\n2. subtrair\n3. multiplicar\n4. dividir fracoes\n0. sair\n");
         //printf("Pressione a tecla referente a acao que deseja fazer\n");
 
         opcao = getch();
@@ -37,16 +39,21 @@ int main(int argc, char const *argv[])
         {
         case '0':
             system("cls");
-            printf("\nSAINDO DA CALCULADORA...");
+            printf("SAINDO DA CALCULADORA...");
             break;
         case '1':
             system("cls");
-            printf("\n1. soma (selecionado)\n\n");
+            printf("1. soma (selecionado)\n\n");
             somaFracao();
+            break;
+        case '2':
+            system("cls");
+            printf("2. subtracao (selecionado)\n\n");
+            subtraiFracao();
             break;
         default:
             system("cls");
-            printf("\nCOMANDO INVALIDO");
+            printf("COMANDO INVALIDO");
             break;
         }
     }
