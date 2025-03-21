@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <conio.h>
 
+#include "somaFracao.h"
+
 /*
 Nome: Allan Carneiro da Cunha Silveira
 Data: 2025-03-19
@@ -25,22 +27,26 @@ int main(int argc, char const *argv[])
 
     while (opcao != '0')
     {
-        printf("\nEscolha uma opcao: ");
+        printf("\n\nEscolha uma opcao: ");
         printf("\n1. soma\n2. subtrair\n3. multiplicar\n4. dividir fracoes\n0. sair\n");
-        printf("Pressione a tecla referente a acao que deseja fazer\n");
+        //printf("Pressione a tecla referente a acao que deseja fazer\n");
 
         opcao = getch();
 
         switch (opcao)
         {
         case '0':
-            printf("\nCASO 0");
+            system("cls");
+            printf("\nSAINDO DA CALCULADORA...");
             break;
         case '1':
-            printf("\nCASO 1");
+            system("cls");
+            printf("\n1. soma (selecionado)\n\n");
+            somaFracao();
             break;
         default:
-            printf("\nCASO DEFAULT");
+            system("cls");
+            printf("\nCOMANDO INVALIDO");
             break;
         }
     }
