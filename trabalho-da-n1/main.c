@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #include <conio.h>
 
-#include "somaFracao.h"
-#include "subtraiFracao.h"
+#include "calculos.h"
+// #include "somaFracao.h"
+// #include "subtraiFracao.h"
 // #include "simplificaFracao.h"
 
 /*
 Nome: Allan Carneiro da Cunha Silveira
-Data: 2025-03-19
+Data: 2025-03-19d
 Descrição: Trabalho da N1
 
 Um lojista atribui o preço de venda dos itens de sua
@@ -30,7 +31,7 @@ int main(int argc, char const *argv[])
     while (opcao != '0')
     {
         printf("\n\nEscolha uma opcao: ");
-        printf("\n1. somar\n2. subtrair\n3. multiplicar\n4. dividir fracoes\n0. sair\n");
+        printf("\n1. somar\n2. subtrair\n3. multiplicar\n4. dividir\n0. sair\n");
         //printf("Pressione a tecla referente a acao que deseja fazer\n");
 
         opcao = getch();
@@ -50,6 +51,16 @@ int main(int argc, char const *argv[])
             system("cls");
             printf("2. subtracao (selecionado)\n\n");
             subtraiFracao();
+            break;
+        case '3':
+            system("cls");
+            printf("3. multiplicacao (selecionado)\n\n");
+            multiplicaFracao();
+            break;
+        case '4':
+            system("cls");
+            printf("4. divisao (selecionado)\n\n");
+            divideFracao();
             break;
         default:
             system("cls");
