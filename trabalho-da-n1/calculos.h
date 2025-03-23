@@ -4,6 +4,8 @@
 Nome: Allan Carneiro da Cunha Silveira
 Data: 2025-03-23
 Descrição: Funções de calculo da calculadora
+
+tentei fazer um arquivo header para cada função por conveniencia porem ocorream varios erros de conflito de declaração de include e funções
 */
 
 int simplificaFracao(int simplificado, int fracionador)
@@ -19,7 +21,7 @@ int simplificaFracao(int simplificado, int fracionador)
             simplificado /= i;
             fracionador /= i;
             aux /= i; // otimização
-            i = 1;
+            i = 1;    // no fim do loop do for é sempre adicionado +1
         }
     }
     return simplificado;
@@ -45,7 +47,7 @@ void somaFracao()
 
     denominador1 *= denominador2;
 
-    printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
+    // printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
 
     numerador2 = simplificaFracao(numerador1, denominador1);
     denominador2 = simplificaFracao(denominador1, numerador1);
@@ -65,7 +67,7 @@ void somaFracao()
 
     // }
 
-    printf("\n%d \n%d", numerador2, denominador2);
+    printf("\nRESULTADO:\n%d\n--\n%d", numerador2, denominador2);
 }
 
 void subtraiFracao()
@@ -88,12 +90,12 @@ void subtraiFracao()
 
     denominador1 *= denominador2;
 
-    printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
+    // printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
 
     numerador2 = simplificaFracao(numerador1, denominador1);
     denominador2 = simplificaFracao(denominador1, numerador1);
 
-    printf("\n%d \n%d", numerador2, denominador2);
+    printf("\nRESULTADO:\n%d\n--\n%d", numerador2, denominador2);
 }
 
 void multiplicaFracao()
@@ -112,12 +114,12 @@ void multiplicaFracao()
     numerador1 *= numerador2;
     denominador1 *= denominador2;
 
-    printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
+    // printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
 
     numerador2 = simplificaFracao(numerador1, denominador1);
     denominador2 = simplificaFracao(denominador1, numerador1);
 
-    printf("\n%d \n%d", numerador2, denominador2);
+    printf("\nRESULTADO:\n%d\n--\n%d", numerador2, denominador2);
 }
 
 void divideFracao()
@@ -136,10 +138,10 @@ void divideFracao()
     numerador1 *= denominador2;
     denominador1 *= numerador2;
 
-    printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
+    // printf("\n%d \n%d", numerador1, denominador1); // temporario para testes
 
     numerador2 = simplificaFracao(numerador1, denominador1);
     denominador2 = simplificaFracao(denominador1, numerador1);
 
-    printf("\n%d \n%d", numerador2, denominador2);
+    printf("\nRESULTADO:\n%d\n--\n%d", numerador2, denominador2);
 }
