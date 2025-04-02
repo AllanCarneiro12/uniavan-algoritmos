@@ -39,5 +39,16 @@
 			"$0"
 		],
 		"description": "incluir bibliotecas padrão da linguagem C"
+	},
+
+	"codigo padrão em C": {
+		"prefix": "mmain",
+		"body": [
+			"void main ()",
+			"{",
+			"    system(\"cls\");",
+			"    $0",
+			"}"
+		]
 	}
 }
