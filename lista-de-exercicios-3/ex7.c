@@ -4,20 +4,18 @@
 /*
 Nome: Allan Carneiro da Cunha Silveira
 Data: 2025-04-02
-Descrição: 1. Criando e exibindo um vetor. Crie um vetor de 5 posições e exiba seus valores.
+Descrição: 7. Multiplicando elementos de um vetor por 2. Multiplique cada elemento de um
+vetor por 2.
 */
 
-int main(int argc, char const *argv[])
+void main()
 {
     system("cls");
-    int vetor[5] = {1, 2, 3, 4, 5};
-
-    // printf("%d", sizeof(vetor)/ sizeof(int));
+    int vetor[5] = {12, 45, 70, 31, 2};
 
     for (int i = 0; i < sizeof(vetor) / sizeof(int); i++)
     {
+        vetor[i] *= 2;
         printf("vetor[%d] = %d\n", i, vetor[i]);
     }
-
-    return 0;
 }

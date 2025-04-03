@@ -8,8 +8,19 @@ Descrição: 2. Preenchendo um vetor com entrada do usuário. Peça ao usuário 
 um vetor de 5 posições e exiba os valores digitados
 */
 
-void main ()
+void main()
 {
     system("cls");
-    
+    int vetor[5];
+
+    for (int i = 0; i < sizeof(vetor) / sizeof(int); i++)
+    {
+        printf("insira a posição %d do vetor: ", i);
+        scanf("%d", &vetor[i]);
+    }
+
+    for (int i = 0; i < sizeof(vetor) / sizeof(int); i++)
+    {
+        printf("vetor[%d] = %d\n", i, vetor[i]);
+    }
 }
