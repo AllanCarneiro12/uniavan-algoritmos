@@ -8,7 +8,7 @@ Descrição: 4 - Contar quantas vezes uma letra aparece na string.
 #include <stdlib.h>
 #include <string.h>
 
-void main ()
+void main()
 {
     system("cls");
     char palavra[100], letra;
@@ -19,10 +19,9 @@ void main ()
     printf("Digite uma letra:");
     scanf("%c", &letra);
 
-
     while (palavra[i] != '\0')
     {
-        if (palavra[i] == letra) //TODO: testar letra maiscula e minuscula
+        if (palavra[i] == letra) // TODO: testar letra maiscula e minuscula
         {
             contador++;
         }
