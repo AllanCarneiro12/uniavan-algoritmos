@@ -1,0 +1,3 @@
+{
+        //     palavra[i] = letraNova;
+        // }

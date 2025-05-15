@@ -36,6 +36,7 @@
 		"body": [
 			"#include <stdio.h>",
 			"#include <stdlib.h>",
+			"#include <string.h>",
 			"$0"
 		],
 		"description": "incluir bibliotecas padrão da linguagem C"
