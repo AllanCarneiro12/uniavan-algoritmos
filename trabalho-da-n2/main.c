@@ -20,7 +20,7 @@ void main()
 {
     system("cls");
 
-    int i, j, p, npro, ncli;
+    int i, p, npro, ncli;
     int compra[CLIENTES];
     float preco[PRODUTOS];
     float total;
@@ -39,4 +39,20 @@ void main()
     {
         compra[i] = random(npro) + 1;
     }
+
+    printf("Simulacao para:\n");
+    printf("  %d produtos\n", npro);
+    printf("  %d clientes\n", ncli);
+    printf("-------------------------------\n");
+    printf("Cliente  | Produto | Valor\n");
+    printf("-------------------------------\n");
+
+    for (i = 0; i < ncli; i++)
+    {
+        total += preco[compra[i]];
+        printf("  %-6d |  %-6d | R$ %7.2f\n", i, compra[i] + 1, preco[compra[i]]);
+    }
+
+    printf("-------------------------------\n");
+    printf("TOTAL DE VENDAS    | R$ %7.2f\n", total);
 }
