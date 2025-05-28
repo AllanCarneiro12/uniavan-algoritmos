@@ -7,13 +7,17 @@ Descrição: Exercício 1: Soma de números pares de um vetor.
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
-void somaPares(int vetor[], int tamanho)
+// #define N 1000000
+
+// Função com Do While
+void somaParesDoWhile(int vetor[], int tamanho)
 {
     int soma = 0;
     int i = 0;
 
-    do 
+    do
     {
         if (vetor[i] % 2 == 0)
         {
@@ -22,43 +26,63 @@ void somaPares(int vetor[], int tamanho)
         }
         i++;
     } while (i < tamanho);
-    
+
     printf("Soma dos numeros pares: %d\n", soma);
 }
 
-void main ()
+// Função com While
+void somaParesWhile(int vetor[], int tamanho)
+{
+    int soma = 0;
+    int i = 0;
+
+    while (i < tamanho)
+    {
+        if (vetor[i] % 2 == 0)
+        {
+            soma += vetor[i];
+            printf("Numero: %d; Soma: %d\n", vetor[i], soma);
+        }
+        i++;
+    }
+
+    printf("Soma dos numeros pares: %d\n", soma);
+}
+
+// Função com For
+void somaParesFor(int vetor[], int tamanho)
+{
+    int soma = 0;
+
+    for (int i = 0; i < tamanho; i++)
+    {
+        if (vetor[i] % 2 == 0)
+        {
+            soma += vetor[i];
+            printf("Numero: %d; Soma: %d\n", vetor[i], soma);
+        }
+    }
+
+    printf("Soma dos numeros pares: %d\n", soma);
+}
+
+void main()
 {
     system("cls");
-    
+
+    clock_t inicio, fim;
+    double tempo_gasto;
+
     // int soma = 0;
 
-    int vetor[10]= {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int vetor[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-    somaPares(vetor, 10);
+    inicio = clock();
+    // somaParesDoWhile(vetor, 10);
+    // somaParesWhile(vetor, 10);
+    somaParesFor(vetor, 10);
+    fim = clock();
 
-    // int tamanho = strlen(vetor);
-
-    // printf("%d", tamanho);
-
-    // for (int i = 0; i < 10; i++)
-    // {
-    //     if (vetor[i] % 2 == 0)
-    //     {
-    //         soma += vetor[i];
-    //     }
-    // }
-
-    // int i = 0;
-
-    // do {
-    //     if (vetor[i] % 2 == 0)
-    //     {
-    //         soma += vetor[i];
-    //         printf("Soma parcial: %d\n", vetor[i]);
-    //     }
-    //     i++;
-    // } while (i < 10);
-    
-    
-    // printf("Soma dos numeros pares: %d\n", soma);
+    tempo_gasto = (double)(fim - inicio) / CLOCKS_PER_SEC;
+    printf("Tempo gasto: %.6f segundos\n", tempo_gasto);
 }
