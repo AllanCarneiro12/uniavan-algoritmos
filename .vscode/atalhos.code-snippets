@@ -34,6 +34,7 @@
 	"Include bibliotecas padrão do C": {
 		"prefix": "incluir",
 		"body": [
+			"#include <locale.h>",
 			"#include <stdio.h>",
 			"#include <stdlib.h>",
 			"#include <string.h>",
